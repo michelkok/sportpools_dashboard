@@ -1,0 +1,24 @@
+{
+    "name": "sportpools-dashboard",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "next": "14.1.0",
+        "papaparse": "^5.5.2",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "recharts": "^2.8.0"
+    },
+    "devDependencies": {
+        "@types/node": "22.15.17",
+        "@types/react": "19.1.3",
+        "autoprefixer": "^10.4.15",
+        "postcss": "^8.4.23",
+        "tailwindcss": "^3.4.1",
+        "typescript": "5.8.3"
+    }
+}
