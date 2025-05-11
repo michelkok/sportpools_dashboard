@@ -1,7 +1,20 @@
 import { Rider } from "../types"; // Assuming you have a Rider type defined
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
-export function RiderStats({ title, riders }: { title: string, riders: Rider[] }) {
+export function RiderStats({
+  title,
+  riders,
+}: {
+  title: string;
+  riders: Rider[];
+}) {
   // Find all chosen riders
   const allRiders = riders.filter((rider) => rider.name !== "");
   // Now count the number of times each rider has been selected
@@ -30,13 +43,18 @@ export function RiderStats({ title, riders }: { title: string, riders: Rider[] }
             tick={{ fontSize: 10 }}
             angle={-30}
             textAnchor="end"
-            interval={0}  // Ensure that all labels are displayed
+            interval={0} // Ensure that all labels are displayed
             padding={{ left: 20, right: 20 }}
             height={50}
           />
           <YAxis dataKey="selections" tick={{ fontSize: 12 }} />
           <Tooltip formatter={(value) => `${value} points`} />
-          <Bar dataKey="selections" fill="#ec4899" barSize={25} radius={[10, 10, 0, 0]} />
+          <Bar
+            dataKey="selections"
+            fill="#ec4899"
+            barSize={25}
+            radius={[5, 5, 0, 0]}
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>

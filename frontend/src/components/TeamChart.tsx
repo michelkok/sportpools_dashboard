@@ -1,5 +1,12 @@
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { Rider } from '../types';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+import { Rider } from "../types";
 
 export function TeamChart({ riders }: { riders: Rider[] }) {
   // Aggregate points per user
@@ -19,15 +26,20 @@ export function TeamChart({ riders }: { riders: Rider[] }) {
       <h2 className="text-xl font-semibold mb-2">Puntentelling</h2>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={sortedAggregated}>
-          <XAxis 
-            dataKey="user" 
-            tick={{ fontSize: 10 }} 
-            interval={0}  // Ensure that all labels are displayed
-            padding={{ left: 20, right: 20 }}  // Add padding for extra space
+          <XAxis
+            dataKey="user"
+            tick={{ fontSize: 10 }}
+            interval={0} // Ensure that all labels are displayed
+            padding={{ left: 20, right: 20 }} // Add padding for extra space
           />
           <YAxis tick={{ fontSize: 12 }} />
           <Tooltip formatter={(value) => `${value} points`} />
-          <Bar dataKey="total" fill="#ec4899" barSize={25} radius={[10, 10, 0, 0]} />
+          <Bar
+            dataKey="total"
+            fill="#ec4899"
+            barSize={25}
+            radius={[5, 5, 0, 0]}
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>

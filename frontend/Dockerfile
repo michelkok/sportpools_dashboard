@@ -5,16 +5,17 @@ FROM node:20
 RUN npm install -g pnpm
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /app/frontend
 
 # Copy package.json and install dependencies
-COPY package.json pnpm-lock.yaml ./
+COPY frontend/package.json frontend/pnpm-lock.yaml ./
+
 # Install pnpm globally
 RUN npm install -g pnpm
 RUN pnpm install --frozen-lockfile
 
-# Copy the rest of the project files
-COPY . .
+# Copy the rest of the frontend code
+COPY frontend/ .
 
 # Expose the port (if needed for your app)
 EXPOSE 3000

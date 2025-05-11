@@ -1,0 +1,28 @@
+{
+  "name": "Backend",
+  "dockerComposeFile": "../docker-compose.yaml",
+  "service": "backend",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [
+    8001
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "ms-python.python",
+        "KevinRose.vsc-python-indent",
+        "mgesbert.python-path",
+        "charliermarsh.ruff",
+        "johnpapa.vscode-peacock",
+        "eamodio.gitlens",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "vivaxy.vscode-conventional-commits"
+      ]
+    }
+  }
+}

@@ -4,6 +4,7 @@ import Papa from "papaparse";
 import { Rider } from "../types";
 import { TeamChart } from "../components/TeamChart";
 import { RiderStats } from "../components/RiderStats";
+import ExportButton from "../components/Button";
 
 export default function Home() {
   const [riders, setRiders] = useState<Rider[]>([]);
@@ -77,6 +78,7 @@ export default function Home() {
         title="Populairste kluns"
         riders={riders.filter((r) => r.isKluns)}
       />
+      <ExportButton />
     </main>
   );
 }

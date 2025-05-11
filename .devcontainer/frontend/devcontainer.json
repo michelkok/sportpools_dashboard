@@ -1,0 +1,27 @@
+{
+  "name": "Frontend",
+  "dockerComposeFile": "../docker-compose.yaml",
+  "service": "frontend",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [
+    3000
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "johnpapa.vscode-peacock",
+        "eamodio.gitlens",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-tslint-plugin",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "vivaxy.vscode-conventional-commits"
+      ]
+    }
+  }
+}

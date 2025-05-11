@@ -1,0 +1,27 @@
+services:
+  frontend:
+    build:
+      context: ..
+      dockerfile: frontend/Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+    depends_on:
+      - backend
+    networks:
+      - dev
+
+  backend:
+    build:
+      context: ..
+      dockerfile: backend/Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+    networks:
+      - dev
+    ports:
+      - 8001:8001
+
+networks:
+  dev:
